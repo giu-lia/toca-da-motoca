@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="563.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aluguel.controller.AluguelController">
+   <children>
+      <TextField layoutX="198.0" layoutY="65.0" prefHeight="26.0" prefWidth="238.0" promptText="Marca" />
+      <TextField layoutX="197.0" layoutY="109.0" prefHeight="26.0" prefWidth="114.0" promptText="Modelo" />
+      <TextField layoutX="322.0" layoutY="109.0" prefHeight="26.0" prefWidth="114.0" promptText="Ano" />
+      <TextField layoutX="197.0" layoutY="184.0" prefHeight="26.0" prefWidth="238.0" promptText="Capacidade do tanque" />
+      <TextField layoutX="196.0" layoutY="227.0" prefHeight="26.0" prefWidth="238.0" promptText="Média de consumo" />
+      <TextField layoutX="196.0" layoutY="269.0" prefHeight="26.0" prefWidth="114.0" promptText="Altura" />
+      <TextField layoutX="320.0" layoutY="269.0" prefHeight="26.0" prefWidth="114.0" promptText="Largura" />
+      <TextField layoutX="196.0" layoutY="310.0" prefHeight="26.0" prefWidth="114.0" promptText="Peso" />
+      <TextField layoutX="197.0" layoutY="146.0" prefHeight="26.0" prefWidth="238.0" promptText="Tipo do motor" />
+      <CheckBox layoutX="239.0" layoutY="404.0" mnemonicParsing="false" text="Porta de energia" />
+      <CheckBox layoutX="239.0" layoutY="436.0" mnemonicParsing="false" text="Rádio/CD player" />
+      <CheckBox layoutX="238.0" layoutY="469.0" mnemonicParsing="false" text="Escudo de vento" />
+      <TextField layoutX="195.0" layoutY="350.0" prefHeight="26.0" prefWidth="230.0" promptText="Custo do aluguel diário" />
+   </children>
+</AnchorPane>
