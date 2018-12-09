@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="709.0" prefWidth="801.0" style="-fx-background-color: #3E4147;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telas.alugarMoto.AlugarMotoController">
+   <children>
+      <VBox alignment="CENTER" layoutY="-48.0" prefHeight="587.0" prefWidth="600.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Aluguel" textFill="WHITE" />
+            <Line endX="100.0" startX="-636.5" stroke="#787373" />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Selecione a moto" textFill="WHITE" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableMotos" prefHeight="128.0" prefWidth="560.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Id" />
+                  <TableColumn prefWidth="75.0" text="Categoria" />
+                  <TableColumn prefWidth="75.0" text="Marca" />
+                  <TableColumn prefWidth="75.0" text="Modelo" />
+                  <TableColumn prefWidth="75.0" text="Ano" />
+                  <TableColumn prefWidth="75.0" text="Altura" />
+                  <TableColumn prefWidth="75.0" text="Largura" />
+                  <TableColumn prefWidth="75.0" text="Peso" />
+                  <TableColumn prefWidth="75.0" text="Motor" />
+                  <TableColumn prefWidth="75.0" text="Tanque" />
+                  <TableColumn prefWidth="75.0" text="Consumo mdio" />
+                  <TableColumn prefWidth="75.0" text="Porta de Energia" />
+                  <TableColumn prefWidth="75.0" text="Radio" />
+                  <TableColumn prefWidth="75.0" text="Cdplayer" />
+                  <TableColumn prefWidth="75.0" text="Escudo de vento" />
+                  <TableColumn prefWidth="75.0" text="Auguel dirio" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="194.0" spacing="10.0">
+               <children>
+                  <Label text="Selecione o cliente" textFill="WHITE" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableClientes" layoutX="30.0" layoutY="215.0" prefHeight="134.0" prefWidth="560.0">
+               <columns>
+                <TableColumn prefWidth="75.0" text="Modelo" />
+                <TableColumn prefWidth="75.0" text="Nome" />
+                  <TableColumn prefWidth="75.0" text="Idade" />
+                  <TableColumn prefWidth="75.0" text="Telefone" />
+                  <TableColumn prefWidth="75.0" text="CPF" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="Data da retirada" textFill="WHITE" />
+                  <DatePicker fx:id="dateRetirada" style="-fx-background-color: #FFFFFF;" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Local retirada" textFill="WHITE" />
+                  <TextField fx:id="edtLocalRetirada" layoutX="46.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="553.0" spacing="10.0">
+               <children>
+                  <Label text="Data da devolucao" textFill="WHITE" />
+                  <DatePicker fx:id="dateDevolucao" style="-fx-background-color: #FFFFFF;" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Local devolucao" textFill="WHITE" />
+                  <TextField fx:id="edtLocalDevolucao" layoutX="46.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Line endX="100.0" startX="-636.5" stroke="#787373" />
+            <Label text="Valores adicionais" textFill="WHITE" />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Combustivel pre-pago" textFill="WHITE" />
+                  <TextField fx:id="edtCombustivel" prefHeight="26.0" prefWidth="90.0" promptText="Valor" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Jaqueta" textFill="WHITE" />
+                  <TextField fx:id="edtJaqueta" layoutX="46.0" layoutY="10.0" prefHeight="26.0" prefWidth="81.0" promptText="Valor" />
+                  <Label layoutX="217.0" layoutY="10.0" text="Seguro" textFill="WHITE" />
+                  <TextField fx:id="edtSeguro" layoutX="253.0" layoutY="10.0" prefHeight="26.0" prefWidth="92.0" promptText="Valor" />
+               </children>
+            </HBox>
+            <Line endX="100.0" layoutX="667.0" layoutY="497.0" startX="-636.5" stroke="#616060" />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Valor total:" textFill="WHITE" />
+                  <Text fx:id="txtTotal" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-background-color: #FFFFFF;" text="R$0,00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Line endX="100.0" startX="-636.5" stroke="#656262" />
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="602.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnCalcular" minHeight="40.0" mnemonicParsing="false" onAction="#calcularTotal" style="-fx-background-color: #DFBA69;" text="Calcular total" />
+                  <Button fx:id="btnFinalizar" layoutX="348.0" layoutY="10.0" minHeight="40.0" mnemonicParsing="false" onAction="#salvarAluguel" style="-fx-background-color: #DFBA69;" text="Finalizar aluguel" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
